@@ -1,0 +1,16 @@
+//Helpers
+@import "./Helpers/variables";
+
+//vendors
+//Base
+@import "./Base/reset";
+@import "./Base/costomize";
+//Layout
+@import "./Layout/header";
+@import "./Layout/sidebar";
+//Components
+@import "./Components/button";
+//Pages
+@import "./Pages/editStudent";
+@import "./Pages/dashboard.scss";
+//Theme
