@@ -1,0 +1,61 @@
+
+.left{
+    position: fixed;
+    z-index: 99;
+            background-color:$colo-blu2;
+            color: $colo-white1;
+            border-radius: 20px;
+            height: 500px;
+            .logo{
+                :hover{
+                    cursor: pointer;
+                }
+            }
+        .control{
+            
+            .control-item{
+                border-radius: 30px;
+                display: flex;
+                font-size: 0.8em;
+                text-align: center;
+                align-items:baseline;
+                justify-content: left;
+                font-weight: 500;
+                padding: 5px;
+                margin: 5px;
+    transition: all 0.5s;
+        
+                &:hover{
+                    
+                // border-radius: 30px;
+                    font-weight: 500;
+                    background-color: white;
+                    p{
+                        color: red;
+                    }
+                    cursor: pointer;
+                }
+               
+            }
+            .icon_item
+            {
+                height: 35px;
+                width: 35px;
+                line-height: 35px;
+                border-radius: 50%;            
+            }
+            .actionLayout{
+                
+                border-radius: 30px;
+                font-weight: 700;
+                background-color: white;
+                p{
+                    color: red;
+                }
+                
+            }
+        }
+
+        
+}
+    

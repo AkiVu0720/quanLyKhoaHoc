@@ -1,0 +1,24 @@
+
+        .home_content{
+            .info_content{
+                .info_content_left{
+                    .icon_item{
+                        padding-left: $p-30;
+                    }
+                }
+                .info_content_right{
+                    position: relative;
+                    .support_item{
+                        position: absolute;
+                        bottom: 70px;
+                        background-color: $colo-blu2;
+                        padding: $p-10;
+                        border: 1px none ;
+                        border-radius: 60px;
+                        width: 190px;
+                        color: $colo-white1;
+                    }
+                }
+            }
+        }
+       

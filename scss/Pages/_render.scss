@@ -1,0 +1,42 @@
+.content_render{
+    .page_result{
+        background-color: aliceblue;
+        margin: 20px;
+        box-shadow: 5px 2px 18px 5px darkgray;
+        border-radius: 10px;
+        thead{
+            th{
+                text-align: center;
+            }
+        }
+        tbody{
+            tr{
+                &:nth-child(odd){
+                    background-color: white;
+                }
+                            td{
+                                &:first-child, &:last-child,&:nth-child(2),&:nth-child(4){
+                                    text-align: center;
+                                }
+                            
+                            }
+                            .icon_action{
+                                text-align: center;
+                                margin: 0 15px;
+                               font-size: 15px;
+                               transition: all .7s;
+                        
+                               &:hover{
+                                cursor: pointer;
+                                color: red;
+                                font-size: 17px;
+                               }
+                        }
+            }
+        }
+    }
+ 
+}
+
+// style="color: #667ef5
+// style="color: #4f5936

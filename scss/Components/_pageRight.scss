@@ -1,0 +1,103 @@
+.right{
+    z-index: 10;
+    width: 78%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    border-radius: 20px ;
+    // background-color: aliceblue;
+    .content{
+        .fixe_relative{
+            height: 240px;
+            background-color:aliceblue;
+            border-radius: 10px;
+            margin: 20px;
+            .fixe{
+                width: 100%;
+                .slogan{
+                    display: flex;
+                    justify-content: end;
+                    padding: 20px;
+                        .btn-out{
+                                background-color: $colo-blu1;
+                                color: $colo-white1;
+                                padding: $p-10;
+                                border-radius: 40px;
+                                font-size: 1vw;
+                                
+                            }
+            
+                        }
+            }
+        }
+        .content_render{
+            .page_null{
+                text-align: center;
+                align-items: center;
+                padding: 20px;
+                p:first-child{
+                    font-size: 24px;
+                   
+                }
+                p:last-child{
+                    display: block;
+                font-size: 14px;
+                }
+                .img_item {
+                    margin-bottom: 20px;
+                    img {
+                        width: 340px;
+                        height: 255px;
+    
+                    }
+                }
+              }
+        }
+       
+
+    }
+    
+    
+    
+    .manage_student {
+        
+            .manage_head{
+                span{
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                }
+                
+            }
+            .manage_content {
+                margin: $m-30;
+                background-color: $colo-gray1;
+                padding: $p-20;
+                .img_item {
+                    img {
+                        width: 340px;
+                        height: 255px;
+    
+                    }
+                }
+                .manage_content_text{
+                    .page_result{
+                        text-align: center;
+                        background-color: aqua;
+                        .table{
+                            text-align: center;
+                        }
+                    }
+                  .page_null{
+                    p:first-child{
+                        font-size: 24px;
+                    }
+                    p:last-child{
+                    font-size: 14px;
+                    }
+                  }
+                   
+                }
+            }
+    }
+        
+}

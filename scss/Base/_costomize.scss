@@ -1,0 +1,16 @@
+.modal_row{
+    width: 70%;
+    margin: 0 auto;
+    .row_item:nth-child(even){
+        padding-left: 30px;
+    }
+    .row_item:nth-child(odd){
+
+        padding-right: 30px;
+    }
+    .boder_gender{
+        border: 4px dashed $colo-blu1;
+padding: 10px;
+width: 80%;
+    }
+}

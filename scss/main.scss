@@ -10,7 +10,14 @@
 @import "./Layout/sidebar";
 //Components
 @import "./Components/button";
+@import"./Components/icon";
+@import "./Components/footerPage";
+@import "./Components/success";
+@import"./Components/pageRight";
+@import "./Components/sidebar";
 //Pages
-@import "./Pages/editStudent";
-@import "./Pages/dashboard.scss";
+@import "./Pages/dashboard";
+@import "./Pages/login";
+@import "./Pages/render";
+@import "./Pages/course";
 //Theme

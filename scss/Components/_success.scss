@@ -1,0 +1,37 @@
+.toast_mess{
+    width: 18%;
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    text-align:end;
+    padding: 15px;
+    border: 1px solid #47d864;
+    border-left: 4px solid #47d864;
+    background-color:white;
+    box-shadow: 0 5px 8px #ccdccf;
+    transition: all linear 0.3s;
+    border-radius: 10px;
+    animation: slideInleft ease .3s, fadeOut linear 1s 3s forwards;
+}
+
+
+@keyframes slideInleft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0) ;
+    }
+}
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+.icon_suc{
+    color: #47d864;    
+    padding-right: 10px;
+}

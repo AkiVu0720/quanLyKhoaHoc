@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <!-- JQuery UI -->
+  <link rel="stylesheet" href="css/jquery-ui.min.css" />
+  <!-- Main Css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Account</title>
+</head>
+
+<body>
+  <div class="container-fluid min-vh-100 ">
+    <div class="row align-items-start dashboard ">
+      <div class=" col-2 side_bar text-center">
+        <div class="logo p-4 border-bottom mb-4">
+          <div class="img-fluid"><img src="../img/Ellipse 6.png" alt="logo" /></div>
+          <div class="pt-3 text-light">Rikkei Academy</div>
+        </div>
+        <div class="control">
+
+
+          <div class="control-item icon_item p-2 d-flex justify-content-start align-items-center">
+            <div><img src="../img/home-2.png" alt="home"></div>
+            <div class="ps-4" onclick="control()"> Bảng điều khiển</div>
+          </div>
+
+          <div class="control-item  icon_item p-2   d-flex justify-content-start align-items-center">
+            <div><img src="../img/home-2.png" alt="home"></div>
+            <div class="ps-4" onclick="manageClass()">Quản lý lớp học</div>
+          </div>
+
+          <div class="control-item icon_item p-2   d-flex justify-content-start align-items-center">
+            <div><img src="../img/teacher1.png" alt="home"></div>
+            <div class="ps-4" onclick="manageStudent()">Quản lý sinh viên</div>
+          </div>
+
+          <div class="control-item icon_item p-2   d-flex justify-content-start align-items-center">
+            <div><img src="../img/chart-square.png" alt="home"></div>
+            <div class="ps-4" onclick="manageCourse()"> Quản lý khóa học</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class=" header_right col-10 ">
+        <div class=" row text-center slogan">
+          <p class=" col-8 ">Học là quá trình không ngừng nghỉ. Được học và làm mà phát triển đó mới là lẽ sống. </p>
+          <div class=" col-1 notification ">
+            <i class="fa-regular fa-bell"></i>
+            <div class="notification_dot"></div>
+          </div>
+          <div class="col-1 btn-out ">Đăng Xuất</div>
+        </div>
+
+
+        <div class="render_content">
+            <div class="render_content_head">
+                <div class="manage_head d-flex justify-content-evenly p-3 ">
+                    <h3>Quản lý Tài Khoản</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCourse">
+                            Thêm Mới
+                        </button>
+                    </div>
+                    <div class="search">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input id="search_Student" type="text" class="form-control" placeholder="Nhập vào đây để tìm kiếm"
+                                aria-label="Recipient's username" aria-describedby="button-search">
+                            <button class="btn btn-outline-secondary" type="button" id="button-search">Tìm
+                                kiếm</button>
+                        </div>
+                    </div>
+                    <div class="sort">
+                        <p>Sắp xếp</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Lựa chọn</option>
+                            <option value="1">Mã lớp</option>
+                            <option value="2">Lớp học</option>
+                            <option value="3">Trạng thái</option>
+                          </select>
+                    </div>
+                </div>
+              </div>
+
+              <div class="manage_content text-center">
+                <div class="manage_content_text">  
+                    <div class="page_result" id="page_result">
+                        <table border="1px" class="table">
+                            <thead>
+                                <th>STT</th>
+                                <th>Email</th>
+                                <th>Mật khẩu</th>
+                                <th>Họ và tên</th>
+                                <th>Trạng Thái</th>
+                                <th>Hành Động</th>
+                            </thead>
+                            <tbody id="tbody">
+    
+                            </tbody>
+                        </table>
+                        <div class="footer_page">
+                            <a href="javascript:prevPage()" id = "prev">preview</a>
+                            <ul id="listPage"></ul>
+                            <a href="javascript:nextPage()" id="next">next</a>
+                        </div>
+                    </div>
+    
+                    <div class="page_null" id="page_null">
+                        <div class="img-fluid img_item">
+                            <img src="../img/no notification.png" alt="">
+                        </div>
+                    <p>Không có Khóa Học Nào :(</p>
+                    <p>Hãy thêm sinh viên vào học viện Rikkei Academy nào <3 . </p>
+                    </div>
+                
+                </div>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- JS -->
+<script src="../js/contro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+
+</body>
+
+</html>
